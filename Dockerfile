@@ -8,10 +8,12 @@ RUN apt-get update && apt-get install -y \
     git \
     python3 \
     python3-pip \
-    python3-dev
+    python3-dev \
+    libcurl4-openssl-dev \
+    libjsoncpp-dev
 
 # Install Python packages
-RUN pip3 install pandas numpy matplotlib
+RUN pip3 install pandas numpy matplotlib requests
 
 # Create app directory
 WORKDIR /app
